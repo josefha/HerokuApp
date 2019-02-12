@@ -36,7 +36,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run migrate!
-        run: npm run migrate
+      - run:
+          name: migrate
+          command: npm run migrate
+
 
 
 workflows:
